@@ -1,0 +1,17 @@
+.flashsaleupper {
+    display: flex;
+    gap: 35px;
+    margin: 65px 0;
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 35px;
+
+        .text-area {
+            width: 100%;
+            align-items: start;
+        }
+    }
+}

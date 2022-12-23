@@ -1,0 +1,15 @@
+.flashsalebig {
+    height: 665px;
+    width: 825px;
+    background-color: $color-dark-grey;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    
+    h1 {
+        color: white;
+        font-weight: $font-weight-bold;
+    }
+}

@@ -1,0 +1,27 @@
+.shoppingcartdetails {
+    width: 500px;
+    height: 400px;
+    background-color: #fafafa;
+    box-shadow: 0 7px 10px 0px rgb(230, 230, 230);
+    border-radius: 25px;
+
+
+    h1 {
+        padding: 10px 0px 30px 25px;
+    }
+
+    p{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 30px;
+    }
+    h6{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 30px;
+    }
+    .button-theme {
+        width: 80%;
+        margin-left: 10%;
+    }
+}

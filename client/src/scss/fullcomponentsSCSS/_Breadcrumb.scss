@@ -1,0 +1,12 @@
+.breadcrumbs {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 130px;
+    i {
+        margin-top: 3px;
+    }
+    a {
+        color: black;
+        text-decoration: none;
+    }
+}

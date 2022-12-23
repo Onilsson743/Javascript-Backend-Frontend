@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .ring {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        margin: -30px;
+        
+        border: 4px transparent black;
+        border-top: 4px solid #FF0000;
+        border-right: 4px solid transparent;
+        border-radius: 50%;
+        animation: circle 3s linear infinite;
+
+        &:nth-child(1)::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            background: #FF0000;
+            box-shadow: 0 0 0 2px #FF000030, 0 0 0 4px #FF000025, 0 0 0 6px #FF000020, 0 0 0 8px #FF000015, 0 0 0 10px #FF000010, 0 0 0 12px #FF000005;
+            animation: pulsate 1s linear infinite alternate-reverse;
+        }
+        &:nth-child(2)::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            background: blue;
+            box-shadow: 0 0 0 2px #0000FF30, 0 0 0 4px #0000FF25, 0 0 0 6px #0000FF20, 0 0 0 8px #0000FF15, 0 0 0 10px #0000FF10, 0 0 0 12px #0000FF05;
+            animation: pulsate 1s linear infinite alternate-reverse;
+        }
+        &:nth-child(3)::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            background: #00FF00;
+            box-shadow: 0 0 0 2px #00FF0030, 0 0 0 4px #00FF0025, 0 0 0 6px #00FF0020, 0 0 0 8px #00FF0015, 0 0 0 10px #00FF0010, 0 0 0 12px #00FF0005;
+            animation: pulsate 1s linear infinite alternate-reverse;
+        }
+        &:nth-child(2) {
+            animation-delay: -2s;
+            border-top: 4px solid blue;
+        }
+        &:nth-child(3) {
+            position: absolute;
+            top: -75px;
+            animation-delay: -1s;
+            border-top: 4px solid #00FF00;
+        }
+        
+    }
+    .loading {
+        display: flex;
+        position: absolute;
+        color: white;
+        font-size: 2rem;
+        top: 150%;
+
+        p:nth-child(2) {
+            animation: dot 4s linear infinite;
+        }
+        p:nth-child(3) {
+            animation: dot 4s linear infinite;
+            animation-delay: 2s;
+        }
+        p:nth-child(4) {
+            animation: dot 4s linear infinite;
+            animation-delay: 3s;
+        }
+    }
+}
+
+.dots {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #9880ff;
+    color: #9880ff;
+    animation: dotFlashing 1s infinite linear alternate;
+    animation-delay: 0s;
+  }
+  
+  .dots::before, .dots::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }
+  
+  .dots::before {
+    left: -15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #9880ff;
+    color: #9880ff;
+    animation: dotFlashing 1s infinite alternate;
+    animation-delay: 0.75s;
+  }
+  
+  .dots::after {
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #9880ff;
+    color: #9880ff;
+    animation: dotFlashing 1s infinite alternate;
+    animation-delay: 1.5s;
+  }
+  
+  @keyframes dotFlashing {
+    0% {
+      background-color: #9880ff;
+    }
+    50%,
+    100% {
+      background-color: #ebe6ff;
+    }
+  }
+
+
+
+
+@keyframes circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes pulsate {
+    0% {
+        opacity: 10%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes dot {
+    0% {
+        opacity: 5%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 5%;
+    }
+
+}
+
+
+@keyframes dot1 {
+    0% {
+        opacity: 5%;
+    }
+    20% {
+        opacity: 5%;
+    }
+    30% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 5%;
+    }
+}
+@keyframes dot2 {
+    0% {
+        opacity: 5%;
+    }
+    50% {
+        opacity: 5%;
+    }
+    60% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+@keyframes dot3 {
+    0% {
+        opacity: 5%;
+    }
+    80% {
+        opacity: 5%;
+    }
+    90% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 5%;
+    }
+}

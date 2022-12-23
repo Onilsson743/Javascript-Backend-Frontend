@@ -1,0 +1,58 @@
+.productdetailsfull {
+    width: 540px;
+    border: 1px solid black;
+
+    .title {
+        font-size: 2.5rem;
+        
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .sizes-section {
+            display: flex;
+            gap: 50px;
+
+            .sizes-button-section {
+                display: flex;
+                gap: 10px;
+
+
+                .sizes-button {
+                    position: absolute;
+                    clip: rect(0, 0, 0, 0);
+                    height: 1px;
+                    width: 1px;
+                    border: 0;
+                    overflow: hidden;  
+                    
+                    &:checked + label {
+                        background-color: $color-theme-orange;
+                        box-shadow: none;
+                    }
+                }
+
+                label {
+                    background-color: white;
+                    font-size: 16px;
+                    line-height: 1;
+                    text-align: center;
+                    padding: 12px 16px;
+                    border: 1px solid black;
+                }
+            }
+          
+
+        }
+        .color-section {
+            display: flex;
+            gap: 43px;
+        }
+
+        
+
+    }
+
+}

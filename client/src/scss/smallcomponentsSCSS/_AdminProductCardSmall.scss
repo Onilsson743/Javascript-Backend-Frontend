@@ -1,0 +1,32 @@
+.adminproductcardsmall {
+    padding: 0.5rem 2rem 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.25) ;
+    
+    .productobjectbox {        
+        flex: 1;
+        height: 40px;
+        
+        
+        img {
+            height: 40px;
+        }
+        p {
+            
+        }
+    }
+    .options {
+        display: flex;
+    }
+    .delete-button {
+        background-color: rgb(203, 122, 122);
+
+        &:hover {
+            background-color: red;
+        }
+    }
+    
+}

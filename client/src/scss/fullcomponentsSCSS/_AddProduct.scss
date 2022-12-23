@@ -1,0 +1,32 @@
+.newproduct {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: grey;    
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .formOption {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+
+            label {
+                font-size: 1.2rem;
+                font-weight: $font-weight-medium;
+            }
+            input {
+                width: 400px;
+                height: 30px;
+            }
+        }
+    }
+    .button-theme {
+        width: 100%;
+        margin-top: 20px;
+    }
+}

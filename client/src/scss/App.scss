@@ -1,0 +1,42 @@
+// General
+@import 'General.scss';
+
+
+// Small components
+@import './smallcomponentsSCSS/Productcard.scss';
+@import './smallcomponentsSCSS/FlashSaleBig';
+@import './smallcomponentsSCSS/ProductCardHorizontal';
+@import './smallcomponentsSCSS/ImagePreview';
+@import './smallcomponentsSCSS/ProductDetailsFull';
+@import './smallcomponentsSCSS/ShoppingCartProduct';
+@import './smallcomponentsSCSS/ShoppingCartDetails';
+@import './smallcomponentsSCSS/AdminProductCard';
+@import './smallcomponentsSCSS/AdminProductCardSmall';
+@import './smallcomponentsSCSS/AddOrModifyProduct';
+
+
+// Full components
+@import './fullcomponentsSCSS/Navbar.scss';
+@import './fullcomponentsSCSS/Header.scss';
+@import './fullcomponentsSCSS/Sale.scss';
+@import './fullcomponentsSCSS/FeaturedProducts.scss';
+@import './fullcomponentsSCSS/FlashSale.scss';
+@import './fullcomponentsSCSS/SupportOptions.scss';
+@import './fullcomponentsSCSS/FlashSaleUpper';
+@import './fullcomponentsSCSS/FlashSaleLower';
+@import './fullcomponentsSCSS/FashionFlashSale';
+@import './fullcomponentsSCSS/SortedProductsSection';
+@import './fullcomponentsSCSS/Support';
+@import './fullcomponentsSCSS/Foooter';
+@import './fullcomponentsSCSS/AddProduct';
+@import './fullcomponentsSCSS/Breadcrumb';
+@import './fullcomponentsSCSS/SideMenu';
+@import './fullcomponentsSCSS//AdminWindow';
+
+
+// Full pages
+@import './PagesSCSS/Contact';
+@import './PagesSCSS/FullProductView';
+@import './PagesSCSS/ShoppingCart';
+@import './PagesSCSS/Home';
+

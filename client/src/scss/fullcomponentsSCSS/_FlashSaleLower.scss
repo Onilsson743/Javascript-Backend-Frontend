@@ -1,0 +1,17 @@
+.flashsalelower {
+    display: flex;
+    justify-content: flex-end;
+    gap: 35px;
+     
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 35px;
+
+        .text-area {
+            width: 100%;
+            align-items: start;
+        }
+    }
+}

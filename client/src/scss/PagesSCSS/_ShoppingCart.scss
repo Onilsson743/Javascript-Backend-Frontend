@@ -1,0 +1,14 @@
+.shopping-cart-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+
+
+    .shopping-cart-products {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        flex: 1;
+    }
+}

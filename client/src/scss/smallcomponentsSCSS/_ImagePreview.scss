@@ -1,0 +1,29 @@
+.imagepreview {
+    height: 610px;
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .fullsizeimg {
+        height: 444px;
+        width: 100%;
+        position: relative;
+
+        img {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .images {
+        display: flex;
+        justify-content: space-between;
+        
+        img {
+            width: 160px;
+            height: 132px;
+        }
+    }
+}

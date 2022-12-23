@@ -1,0 +1,30 @@
+.productcardhorizontal {
+    display: flex;
+    width: 350px;
+
+    .img-box {
+        width: 160px;
+        height: 130px;
+        background-color: $color-grey-2;
+
+        img{
+            width: 160px;
+            height: 130px;
+            object-fit: cover;
+        }
+    }
+    .description {
+        margin-left: 14px;
+
+        p {
+            color: #616365;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        h5 {
+            margin: 0;
+        }
+        
+    }
+    
+}

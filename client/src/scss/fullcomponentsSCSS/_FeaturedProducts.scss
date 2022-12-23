@@ -1,0 +1,21 @@
+.featured-products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 35px;
+    
+    
+    h4 {
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
+    }
+
+    .grid {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        max-width: 1200px;       
+    }
+}

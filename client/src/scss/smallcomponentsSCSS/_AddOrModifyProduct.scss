@@ -1,0 +1,69 @@
+.AddOrModifyProduct {
+    
+
+    .update-button {
+        background-color: #14a81966;
+        
+        &:hover {
+            background-color: #14a819;
+        }
+    }
+    .updateWindow {
+        z-index: 50;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.5);
+        height: 100vh;
+        width: 100vw;
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+        .updateproduct {
+            width: 40vw;
+            height: auto;
+            background-color: #101827;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: scale 0.5s ease-in-out;
+            padding: 2rem 0;
+
+            h6 {
+                color: #008d09;
+                text-align: center;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                
+                .formOption {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 30px;
+                    
+                    label {
+                        font-size: 1.2;
+                        font-weight: $font-weight-medium;
+                    }
+
+                    input {
+                        width: 25vw;
+                    }
+                    select {
+                        width: 25vw;
+                    }
+                }
+                .button-options {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 20px;
+                }
+            }
+
+        }
+    }
+}
+
