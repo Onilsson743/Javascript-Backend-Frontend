@@ -44,10 +44,15 @@ export const ProductProvider = ({children}: any) => {
     const [featuredProducts, setFeaturedProducts] = useState<mongoProduct []>([])
 
     // Fetch all products
-    const getAllProducts = async () => {
+    const getAllProducts = async (search: string | undefined) => {
         try {
             const response = await axios.get('http://localhost:5000/api/products')
-            setAllProducts(response.data)
+            const data: mongoProduct[] = response.data
+            if (search) {
+                setAllProducts(data.filter(product => product.tag.toLowerCase().includes(search.toLowerCase())))
+            } else {
+                setAllProducts(data)
+            }            
         } catch (error) {
             console.log(error)
         }

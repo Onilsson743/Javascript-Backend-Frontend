@@ -1312,6 +1312,12 @@ a:hover {
 .adminwindow .description-bar .description-box-last {
   flex: 0.7;
 }
+.adminwindow .productcardview {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .contact .breadcrumb {
   padding-top: 150px;

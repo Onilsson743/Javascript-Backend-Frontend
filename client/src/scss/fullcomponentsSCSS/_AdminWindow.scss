@@ -11,7 +11,7 @@
         border-radius: 5px;
         margin-right: 1rem;
         color: white;
-
+        
         &:hover {
             background-color: #7b91ba;
         }
@@ -37,5 +37,12 @@
         .description-box-last {
             flex: 0.7;
         }
+    }
+    .productcardview {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+
     }
 }

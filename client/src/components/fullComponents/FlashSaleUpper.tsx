@@ -1,10 +1,23 @@
+import { useEffect } from "react"
+import { ProductContextType, useProductContext } from "../../contexts/ProductContext"
 import FlashSaleBig from "../smallComponents/FlashSaleBig"
-import Products from '../../data/products/products.json'
 import ProductCard from "../smallComponents/ProductCard"
 
 const FlashSaleUpper = () => {
 
-    const products = Products.slice(8,12)
+  const {getAllProducts, allProducts} = useProductContext() as ProductContextType
+
+  useEffect(() => {
+    getAllProducts();
+  }, [])
+
+  let UpperSaleProducts = allProducts.filter(product => product.tag == "Flash Sale")
+
+  if (UpperSaleProducts.length > 4) {
+    UpperSaleProducts = UpperSaleProducts.slice(0,4)
+  }
+
+  
   
     return (
       <div className='_center'>
@@ -12,7 +25,7 @@ const FlashSaleUpper = () => {
               <FlashSaleBig />
               <section className='grid'>
                 {
-                  products.map(products => <ProductCard key={products.articleNumber} item={products} />) 
+                  UpperSaleProducts.map(products => <ProductCard key={products._id} item={products} />) 
                 }
               </section>
           </div>

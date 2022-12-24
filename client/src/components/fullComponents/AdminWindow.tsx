@@ -7,20 +7,16 @@ import ProductCard from '../smallComponents/ProductCard';
 
 
 
+
 const AdminWindow: React.FC = () => {
 
     const { allProducts, getAllProducts, refetch, deleteProduct } = useProductContext() as ProductContextType
     const [viewType, setViewType] = useState(true)
-
-    useEffect(() => {
-        console.log(viewType)
-    }, [viewType])
-
-    useEffect(() => {
-        getAllProducts()
-    }, [refetch, viewType])
-
     const [search, setSearch] = useState<string>("")
+  
+    useEffect(() => {   
+        getAllProducts(search)
+    }, [refetch, viewType, search])
 
    
 
@@ -72,7 +68,7 @@ const AdminWindow: React.FC = () => {
                         }
                     </div>
                     :
-                    <div className='productcardview Allproductlist'>
+                    <div className='productcardview'>
                         {
                             allProducts.map(product => <ProductCard key={product._id} item={product}/>)
                         }
