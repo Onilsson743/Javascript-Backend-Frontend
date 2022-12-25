@@ -1,26 +1,19 @@
 import FlashSaleBig from "../smallComponents/FlashSaleBig"
 import ProductCard from "../smallComponents/ProductCard"
-import Products from '../../data/products/products.json'
 import { ProductContextType, useProductContext } from "../../contexts/ProductContext"
 import { useEffect } from "react"
+import { mongoProduct } from "../../models/types"
 
 
 const FlashSaleLower = () => {
 
-  const {getAllProducts, allProducts} = useProductContext() as ProductContextType
+    const {getAllProducts, allProducts} = useProductContext() as ProductContextType
 
-  useEffect(() => {
-    getAllProducts();
-  }, [])
-
-  let LowerSaleProducts = allProducts.filter(product => product.tag == "Flash Sale")
-
-  if (LowerSaleProducts.length > 4) {
-    LowerSaleProducts = LowerSaleProducts.slice(0,4)
-  }
-
-    const products = Products.slice(12,16)
-  
+    useEffect(() => {
+      getAllProducts();
+    }, [])
+    
+    let LowerSaleProducts: mongoProduct[] = allProducts.slice(4,8).filter(product => product.tag == "Flash Sale")
   
     return (
       <div className='_center'>

@@ -5,8 +5,8 @@ import { mongoProduct } from '../models/types';
 
 
 export interface ShoppingCartType {
-    refetch: Boolean
-    setRefetch: Function
+    refetchCart: Boolean
+    setRefetchCart: Function
     addProductToCart: Function
     addProductToFavourites: Function
     shoppingCart: mongoProduct[]
@@ -36,7 +36,7 @@ export const ShoppingCartProvider = ({children}: any) => {
     }
 
     const url = "http://localhost:5000/api/products"
-    const [refetch, setRefetch] = useState(true)
+    const [refetchCart, setRefetchCart] = useState(true)
     const [shoppingCart, setShoppingCart] = useState<mongoProduct[]>([])
     const [favouriteList, setFavouriteList] = useState<mongoProduct[]>([])
 
@@ -63,7 +63,7 @@ export const ShoppingCartProvider = ({children}: any) => {
     
 
 
-    return <ShoppingCartContext.Provider value={{refetch, setRefetch, addProductToCart, shoppingCart, addProductToFavourites, favouriteList}}>
+    return <ShoppingCartContext.Provider value={{refetchCart, setRefetchCart, addProductToCart, shoppingCart, addProductToFavourites, favouriteList}}>
         {children}
     </ShoppingCartContext.Provider>
 
